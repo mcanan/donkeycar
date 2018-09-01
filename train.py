@@ -108,8 +108,6 @@ def generator(X, y, batch_size, train, categorical_angle, categorical_throttle):
                 if np.random.rand() > .5:
                     image = ImageEnhance.Contrast(image).enhance(
                             np.random.uniform(.5, 2))
-                if np.random.rand() > .75:
-                    image = image.filter(ImageFilter.BLUR)
 
             image = pi.run(np.array(image))
 
